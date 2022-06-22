@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    --primary-colour: #3b3b3b;
+    --secondary-colour: #bebcb6;
+    --bg-secondary: #d2d2d2;
+    --text-secondary: #a88a21;
+    --transition-speed: 500ms ease;
+}
+
+body{
+    min-height: 100vh;
+    color: black;
+    background-color: white;
+}
+
+section {
+
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--primary-colour);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #a88a21;
+}
+
+/*--NAV--*/
+
+.navbar {
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    /*  */
+    margin-left: 0px;
+    background-color: #3b3b3b;
+    transition: 0.5s;
+}
+
+.nav-link {
+    font-size: 1.25em;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+    background-color:#a88a21;
+}
+
+
+

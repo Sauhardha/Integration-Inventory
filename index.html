@@ -1,0 +1,138 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--<link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQlWUE00s/" crossorigin="annonymous">
+    <title>GRN Storage App</title>
+</head>
+
+<body>
+
+    <!---NAV-->
+    <nav class="navbar navbar-expand d-flex flex-row align-item-start" id="sidebar">
+        <a href="#" class="navbar-brand text-light mt-5"></a>
+        <ul class="navbar-nav d-flex flex-row mt-2 w-100">
+            <li class="nav-item w-30">
+                <a href="#" class="nav-link text-light pl-4">Home</a>
+            </li>
+
+            <li class="nav-item w-30">
+                <a href="#" class="nav-link text-light pl-4">Saved</a>
+            </li>
+
+            <li class="nav-item w-30">
+                <a href="#" class="nav-link text-light pl-4">Edit</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="p-4 my-container mt-1">
+        <div class="container mt-4">
+            <h1 class="display-4 text-center" style="font-family:Georgia, 'Times New Roman', Times, serif ;">
+                <i class="fas text-primary"></i>
+                All <span class="">GRNs </span>List</h1>
+                <form id="grn-form">
+                    <div class="form-group">
+                        <label for="grn">GRN</label>
+                        <input type="text" id="grn" class="form-control">
+                    </div>
+
+                    <div class="col-2">
+                    <div class="form-group">
+                        <label for="desktops">Desktops</label>
+                        <input type="text" id="desktops" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="notebooks">Notebooks</label>
+                        <input type="text" id="notebooks" class="form-control">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monitors">Monitors</label>
+                        <input type="text" id="monitors" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="printers">Printers</label>
+                        <input type="text" id="printers" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="servers">Servers</label>
+                        <input type="text" id="servers" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="switches">Switches</label>
+                        <input type="text" id="switches" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="tvs">TVs</label>
+                        <input type="text" id="tvs" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="scanners">Scanners</label>
+                        <input type="text" id="scanners" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="tablets">Tablets</label>
+                        <input type="text" id="tablets" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phones">Phones</label>
+                        <input type="text" id="phones" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobiles">Mobiles</label>
+                        <input type="text" id="mobiles" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="docks">Dock Stations</label>
+                        <input type="text" id="docks" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="ebox">E-Box</label>
+                        <input type="text" id="ebox" class="form-control">
+                    </div>
+                    <input type="submit" value="Add GRN"
+                    class="btn btn-primary btn-block">
+                </form>
+                <div>
+
+                <div class="table-responsive col-lg-12">
+                <table class="table table-striped mt-5 table-hover table-borderless">
+                    <thead>
+                        <tr>
+                            <th>GRN</th>
+                            <th>Desktops</th>
+                            <th>Notebooks</th>
+                            <th>Monitors</th>
+                            <th>Printers</th>
+                            <th>Servers</th>
+                            <th>Switches</th>
+                            <th>TVs</th>
+                            <th>Scanners</th>
+                            <th>Tablets</th>
+                            <th>Phones</th>
+                            <th>Mobiles</th>
+                            <th>DockStations</th>
+                            <th>Ebox</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grn-list"></tbody>
+                </table>
+                </div>
+        </div>
+        <script src="/app.js"></script>
+        
+
+    </section>
+    
+</body>
+
+
+
