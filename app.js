@@ -1,6 +1,6 @@
 //GRN Class:
 class GRNclass {
-    constructor(grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tables, phones, mobiles, docks, ebox)
+    constructor(grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox)
     {
         this.grn = grn;
         this.desktops = desktops;
@@ -23,41 +23,7 @@ class GRNclass {
 //UI GRN Class:
 class UI {
     static displayGRNs() {
-        const StoredGRNs = [
-            {
-                grn: '12345',
-                desktops: '3',
-                notebooks: '20',
-                monitors: '0',
-                printers: '0',
-                servers: '0',
-                switches: '0',
-                tvs: '0',
-                scanners: '0',
-                tablets: '0',
-                phones: '12',
-                mobiles: '0',
-                docks: '0',
-                ebox: '2'
-            },
-            {
-                grn: '12873',
-                desktops: '3',
-                notebooks: '20',
-                monitors: '0',
-                printers: '0',
-                servers: '0',
-                switches: '0',
-                tvs: '0',
-                scanners: '0',
-                tablets: '0',
-                phones: '12',
-                mobiles: '0',
-                docks: '0',
-                ebox: '2'
-            }
-        ];
-        const grns = StoredGRNs;
+        const grns = Store.getGrns();
 
         grns.forEach((item) => UI.addGRNToList(item));
     }
@@ -68,7 +34,7 @@ class UI {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-        <td>${item.grn}</td>
+        <td style="font-weight: bold;">${item.grn}</td>
         <td>${item.desktops}</td>
         <td>${item.notebooks}</td>
         <td>${item.monitors}</td>
@@ -87,11 +53,112 @@ class UI {
 
         list.appendChild(row);
     }
+
+    static deleteGrn(el) {
+        if(el.classList.contains('delete')){
+            el.parentElement.parentElement.remove();
+        }
+    }
+
+    static clearFields() {
+        document.querySelector('#grn').value = '';
+        document.querySelector('#desktops').value = '';
+        document.querySelector('#notebooks').value = '';
+        document.querySelector('#monitors').value = '';
+        document.querySelector('#printers').value = '';
+        document.querySelector('#servers').value = '';
+        document.querySelector('#switches').value = '';
+        document.querySelector('#tvs').value = '';
+        document.querySelector('#scanners').value = '';
+        document.querySelector('#tablets').value = '';
+        document.querySelector('#phones').value = '';
+        document.querySelector('#mobiles').value = '';
+        document.querySelector('#docks').value = '';
+        document.querySelector('#ebox').value = '';
+    }
 }
 //Store Class:
+class Store {
+    static getGrns() {
+        let grns;
+        if(localStorage.getItem('grns') == null) {
+            grns = [];
+        }else {
+            grns = JSON.parse(localStorage.getItem('grns'));
+        }
+        return grns;
+    }
+
+    static addGrn(item) {
+        const grns = Store.getGrns();
+        grns.push(item);
+        localStorage.setItem('grns', JSON.stringify(grns));
+    }
+
+    static removeGrn(grn) {
+        const items = Store.getGrns();
+        items.forEach((item, index) => {
+            if(item.grn == grn) {
+                items.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('items', JSON.stringify(items));
+    }
+}
+
+
+
 
 //Event: Display GRN
 document.addEventListener('DOMContentLoaded', UI.displayGRNs);
 //Event: Add GRN
+document.querySelector('#grn-form').addEventListener('submit', (e) => {
+
+    //Prevent
+    e.preventDefault();
+
+    //Get form values
+    const grn = document.querySelector('#grn').value;
+    const desktops = document.querySelector('#desktops').value;
+    const notebooks = document.querySelector('#notebooks').value;
+    const monitors = document.querySelector('#monitors').value;
+    const printers = document.querySelector('#printers').value;
+    const servers = document.querySelector('#servers').value;
+    const switches = document.querySelector('#switches').value;
+    const tvs = document.querySelector('#tvs').value;
+    const scanners = document.querySelector('#scanners').value;
+    const tablets = document.querySelector('#tablets').value;
+    const phones = document.querySelector('#phones').value;
+    const mobiles = document.querySelector('#mobiles').value;
+    const docks = document.querySelector('#docks').value;
+    const ebox = document.querySelector('#ebox').value;
+
+    //Validate all fields
+    if(grn == '' || desktops == '' || notebooks == '' || monitors == '' || printers == '' || servers == '' || switches == '' || tvs == '' || scanners == '' || tablets == '' || phones == '' || mobiles == '' || docks == '' || ebox == '') {
+        alert('Please fill in all fields');
+    } else {
+        //Create GRN
+        const item = new GRNclass(grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox);
+
+        //Add to List
+        UI.addGRNToList(item);
+
+        //Add to Store
+        Store.addGrn(item);
+
+        //Show Success
+        alert('GRN successfully added');
+
+        //Clear fields
+        UI.clearFields();
+    }
+    
+
+});
 
 //Event: Remove GRN
+document.querySelector('#grn-list').addEventListener('click', (e) => {
+    UI.deleteGrn(e.target)
+    alert('GRN REMOVED');
+});
