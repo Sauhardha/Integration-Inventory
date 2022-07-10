@@ -15,7 +15,7 @@ connection.connect((err) => {
     if (err){
         console.log(err.message);
     }
-    //console.log('db' + connection.state);
+    console.log('db ' + connection.state);
 })
 
 class DbService {
@@ -33,11 +33,29 @@ class DbService {
                     resolve(results);
                 })
             });
-            console.log(response);
+            //console.log(response);
             return response;
 
         }catch(error){
             console.log(error);
+        }
+    }
+
+    async insertNewGrn(grnID) {
+        try{
+            //const dateAdded = new Date();
+            const insertId = await new Promise((resolve, reject) => {
+                const query = "INSERT INTO grn_table (grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+                connection.query(query [grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox], (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result.insertId);
+                })
+            });
+            console.log(insertId);
+            //return response;
+        } catch (err){
+            console.log(error); 
         }
     }
 }

@@ -7,7 +7,6 @@
     
     <!--<link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQlWUE00s/" crossorigin="annonymous">
     <title>GRN Storage App</title>
 </head>
 
@@ -22,7 +21,7 @@
             </li>
 
             <li class="nav-item w-30">
-                <a href="/client/list.html" class="nav-link text-light pl-4">Saved</a>
+                <a href="/list.html" class="nav-link text-light pl-4">Saved</a>
             </li>
 
             <li class="nav-item w-30">
@@ -127,17 +126,57 @@
                     </div>
                     
 
-                    <button style="margin-top: 1rem;"
-                    class="btn btn-primary btn-block" id="submit-input">Add GRN</button>
+                    <button type="button" style="margin-top: 1rem;"
+                    class="btn btn-primary btn-block" id="submit-btn">Add GRN</button>
                 </form>
                 </div>
         </div>
-        <script src="/index.js"></script>
         
         
-
     </section>
-    
+
+    <main>
+        <label>Name:</label>
+        <input type="text" id="name-input">
+        <button id="add-name-btn">Add Name</button>
+
+        <br><br><br>
+        <div>
+           <input placeholder="search by name" id="search-input">
+           <button id="search-btn">Search</button>
+        </div>
+
+        <div class="table-responsive col-lg-12">
+        <table id="table">
+            <thead>
+                <th>GRN</th>
+                <th>Desktops</th>
+                <th>Notebooks</th>
+                <th>Monitors</th>
+                <th>Printers</th>
+                <th>Servers</th>
+                <th>TVs</th>
+                <th>Scanners</th>
+                <th>Tablets</th>
+                <th>Phones</th>
+                <th>Mobiles</th>
+                <th>Docks</th>
+                <th>Ebox</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+
+        <section hidden id="update-row">
+            <label>Name:</label>
+            <input type="text" id="update-name-input">
+            <button id="update-row-btn">Update</button>
+        </section>
+    </main>
+
+    <script src="/index.js"></script>
 </body>
 
 

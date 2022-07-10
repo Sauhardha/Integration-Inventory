@@ -110,4 +110,23 @@ body::-webkit-scrollbar-thumb{
     margin-top: 20px;
 }
 
+main {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+table {
+    margin: 50px auto;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+th, td {
+    padding: 10px;
+}
+
 
