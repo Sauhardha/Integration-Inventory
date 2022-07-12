@@ -13,13 +13,13 @@ app.use(express.urlencoded({ extended : false }));
 
 // create
 app.post('/insert', (request, response) => {
-    console.log(request.body);
+    //console.log(request.body);
     
-    const { grnID } = request.body;
+    let grnItem = [request.body.grn, request.body.desktops, request.body.notebooks, request.body.monitors, request.body.printers, request.body.servers, request.body.switches, request.body.tvs, request.body.scanners, request.body.tablets, request.body.phones, request.body.mobiles, request.body.docks, request.body.ebox];
     const db = dbService.getDbServiceInstance();
 
-    const result = db.insertNewGrn(grnID);
-
+    const result = db.insertNewGrn(grnItem);
+    console.log(grnItem);
     result
     .then(data => response.json({success : true}))
     .catch(err => console.log(err));

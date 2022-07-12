@@ -41,20 +41,19 @@ class DbService {
         }
     }
 
-    async insertNewGrn(grnID) {
+    async insertNewGrn(grnItem) {
         try{
             //const dateAdded = new Date();
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO grn_table (grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-
-                connection.query(query [grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox], (err, result) => {
+                const query = "INSERT INTO grn_table(grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                connection.query(query, grnItem, (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
             });
             console.log(insertId);
             //return response;
-        } catch (err){
+        } catch (error){
             console.log(error); 
         }
     }
