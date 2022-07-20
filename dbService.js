@@ -45,16 +45,33 @@ class DbService {
         try{
             //const dateAdded = new Date();
             const insertId = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO grn_table(grn, desktops, notebooks, monitors, printers, servers, switches, tvs, scanners, tablets, phones, mobiles, docks, ebox) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                const query = 'INSERT INTO `grn_table` (`GRN`, `Desktops`, `Notebooks`, `Monitors`, `Printers`, `Servers`, `Switches`, `TVs`, `Scanners`, `Tablets`, `Phones`, `Mobiles`, `DockStations`, `Ebox`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);';
                 connection.query(query, grnItem, (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
             });
             console.log(insertId);
-            //return response;
+            return {
+                id : insertId,
+                GRN : grnItem[0],
+                Desktops : grnItem[1],
+                Notebooks : grnItem[2],
+                Monitors : grnItem[3],
+                Printers : grnItem[4],
+                Servers : grnItem[5],
+                Switches : grnItem[6],
+                TVs : grnItem[7],
+                Scanners : grnItem[8],
+                Tablets : grnItem[9],
+                Phones : grnItem[10],
+                Mobiles : grnItem[11],
+                DockStations : grnItem[12],
+                Ebox : grnItem[13]
+
+            };
         } catch (error){
-            console.log(error); 
+            console.log(error);
         }
     }
 }

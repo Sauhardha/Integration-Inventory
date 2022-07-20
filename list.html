@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--<link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQlWUE00s/" crossorigin="annonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQlWUE00s/" crossorigin="annonymous">
     <title>GRN Storage App</title>
 </head>
 
@@ -34,31 +36,93 @@
     <section class="p-4 my-container mt-1">
         <div class="container mt-4">
 
-        <div class="table-responsive col-lg-12">
-            <table class="table table-striped mt-5 table-hover table-borderless" id="table">
-                <thead>
-                    <tr>
-                        <th>GRN</th>
-                        <th>Desktops</th>
-                        <th>Notebooks</th>
-                        <th>Monitors</th>
-                        <th>Printers</th>
-                        <th>Servers</th>
-                        <th>Switches</th>
-                        <th>TVs</th>
-                        <th>Scanners</th>
-                        <th>Tablets</th>
-                        <th>Phones</th>
-                        <th>Mobiles</th>
-                        <th>DockStations</th>
-                        <th>Ebox</th>
-                    </tr>
-                </thead>
-                <tbody id="grn-list"></tbody>
-            </table>
-        </div>
-        <script src=""></script>
+            <div class="table-responsive col-lg-12">
+                <table class="table table-striped mt-5 table-hover table-borderless" id="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>GRN</th>
+                            <th>Desktops</th>
+                            <th>Notebooks</th>
+                            <th>Monitors</th>
+                            <th>Printers</th>
+                            <th>Servers</th>
+                            <th>Switches</th>
+                            <th>TVs</th>
+                            <th>Scanners</th>
+                            <th>Tablets</th>
+                            <th>Phones</th>
+                            <th>Mobiles</th>
+                            <th>DockStations</th>
+                            <th>Ebox</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grn-list"></tbody>
+                </table>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    fetch('http://localhost:5100/getAll')
+                        .then(response => response.json())
+                        .then(data => loadHTMLTable(data['data']));
 
-    </div>
+                });
+
+                function loadHTMLTable(data) {
+                    const table = document.querySelector('table tbody');
+
+                    console.log(data);
+
+                    if (data.length === 0) {
+                        table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
+                    }
+
+                    let tableHtml = "";
+
+                    data.forEach(function ({
+                        id,
+                        GRN,
+                        Desktops,
+                        Notebooks,
+                        Monitors,
+                        Printers,
+                        Servers,
+                        Switches,
+                        TVs,
+                        Scanners,
+                        Tablets,
+                        Phones,
+                        Mobiles,
+                        DockStations,
+                        Ebox
+                    }) {
+                        tableHtml += "<tr>";
+                        tableHtml += `<td>${id}</td>`;
+                        tableHtml += `<td>${GRN}</td>`;
+                        tableHtml += `<td>${Desktops}</td>`;
+                        tableHtml += `<td>${Notebooks}</td>`;
+                        tableHtml += `<td>${Monitors}</td>`;
+                        tableHtml += `<td>${Printers}</td>`;
+                        tableHtml += `<td>${Servers}</td>`;
+                        tableHtml += `<td>${Switches}</td>`;
+                        tableHtml += `<td>${TVs}</td>`;
+                        tableHtml += `<td>${Scanners}</td>`;
+                        tableHtml += `<td>${Tablets}</td>`;
+                        tableHtml += `<td>${Phones}</td>`;
+                        tableHtml += `<td>${Mobiles}</td>`;
+                        tableHtml += `<td>${DockStations}</td>`;
+                        tableHtml += `<td>${Ebox}</td>`;
+                        tableHtml += `<td><button class="delete-row-btn" data-id=${id}>Delete</td>`;
+                        tableHtml += `<td><button class="edit-row-btn" data-id=${id}>Edit</td>`;
+                        tableHtml += "</tr>";
+                    });
+
+                    table.innerHTML = tableHtml;
+                }
+            </script>
+
+        </div>
 
 </body>
