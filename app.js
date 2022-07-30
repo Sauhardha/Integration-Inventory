@@ -38,10 +38,30 @@ app.get('/getAll', (request, response) => {
 })
 
 // update
+app.patch('/update', (request, response) => {
+    const {id, grnU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU } = request.body;
 
+    console.log({id, grnU, desktopsU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU});
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.updateById(id, grnU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU);
+
+    result.then(data => response.json({success : data}))
+    .catch(err => console.log(err));
+});
 
 // delete
 
+app.delete('/delete/:id', (request, response) => {
+    console.log(request.params);
+    const { id } = request.params;
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.deleteRowById(id);
+
+    result.then(data => response.json({success : data}))
+    .catch(err => console.log(err));
+})
 
 // running
 

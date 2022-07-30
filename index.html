@@ -49,13 +49,14 @@
                 
                 <form id="grn-form">
                     <div class="row">
+                        
+                    </div>
+                    
+                    <div class="row">
                         <div class="form-group">
                             <label for="grn" style="font-weight: 800;">GRN</label>
                             <input type="text" id="grn" class="form-control">
                         </div>
-                    </div>
-                    
-                    <div class="row">
                         <div class="form-group">
                             <label for="desktops">Desktops</label>
                             <input type="text" id="desktops" class="form-control">
@@ -64,14 +65,14 @@
                             <label for="notebooks">Notebooks</label>
                             <input type="text" id="notebooks" class="form-control">
                         </div>
+                        
+                    </div>
+                    
+                    <div class="row">
                         <div class="form-group">
                             <label for="monitors">Monitors</label>
                             <input type="text" id="monitors" class="form-control">
                         </div>
-                    </div>
-                    
-                    <div class="row">
-                        
                         <div class="form-group">
                             <label for="printers">Printers</label>
                             <input type="text" id="printers" class="form-control">
@@ -80,13 +81,14 @@
                             <label for="servers">Servers</label>
                             <input type="text" id="servers" class="form-control">
                         </div>
+                        
+                    </div>
+                    
+                    <div class="row">
                         <div class="form-group">
                             <label for="switches">Switches</label>
                             <input type="text" id="switches" class="form-control">
                         </div>
-                    </div>
-                    
-                    <div class="row">
                         <div class="form-group">
                             <label for="tvs">TVs</label>
                             <input type="text" id="tvs" class="form-control">
@@ -95,14 +97,14 @@
                             <label for="scanners">Scanners</label>
                             <input type="text" id="scanners" class="form-control">
                         </div>
+                        
+                    </div>
+                    
+                    <div class="row">
                         <div class="form-group">
                             <label for="tablets">Tablets</label>
                             <input type="text" id="tablets" class="form-control">
                         </div>
-                    </div>
-                    
-                    <div class="row">
-                        
                         <div class="form-group">
                             <label for="phones">Phones</label>
                             <input type="text" id="phones" class="form-control">
@@ -111,23 +113,30 @@
                             <label for="mobiles">Mobiles</label>
                             <input type="text" id="mobiles" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="docks">Dock-Stations</label>
-                            <input type="text" id="docks" class="form-control">
-                        </div>
+                        
                     </div>
                     
                     
                     <div class="row">
                         <div class="form-group">
+                            <label for="docks">Dock-Stations</label>
+                            <input type="text" id="docks" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label for="ebox">E-Box</label>
                             <input type="text" id="ebox" class="form-control">
                         </div>
+
+                        <div class="form-group">
+                            <button type="button" style="margin-top: 1.5rem;"
+                        class="btn btn-primary btn-block" id="submit-btn">Add GRN</button>
+                        </div>
+
+                        
                     </div>
                     
 
-                    <button type="button" style="margin-top: 1rem;"
-                    class="btn btn-primary btn-block" id="submit-btn">Add GRN</button>
+                    
                 </form>
                 </div>
         </div>
@@ -136,13 +145,10 @@
     </section>
 
     <main>
-        <label>Name:</label>
-        <input type="text" id="name-input">
-        <button id="add-name-btn">Add Name</button>
 
         <br><br><br>
         <div>
-           <input placeholder="search by name" id="search-input">
+           <input placeholder="Search by GRN" id="search-input">
            <button id="search-btn">Search</button>
         </div>
 
@@ -172,9 +178,89 @@
         </div>
 
         <section hidden id="update-row">
-            <label>Name:</label>
-            <input type="text" id="update-name-input">
-            <button id="update-row-btn">Update</button>
+            <div class="container mt-4">
+            <div class="upBox">
+            <div class="row">
+                <div class="form-group">
+                    <label for="grn" style="font-weight: 800;">GRN</label>
+                    <input type="text" id="grn-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="desktops">Desktops</label>
+                    <input type="text" id="desktops-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="notebooks">Notebooks</label>
+                    <input type="text" id="notebooks-up" class="form-control">
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label for="monitors">Monitors</label>
+                    <input type="text" id="monitors-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="printers">Printers</label>
+                    <input type="text" id="printers-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="servers">Servers</label>
+                    <input type="text" id="servers-up" class="form-control">
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label for="switches">Switches</label>
+                    <input type="text" id="switches-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tvs">TVs</label>
+                    <input type="text" id="tvs-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="scanners">Scanners</label>
+                    <input type="text" id="scanners-up" class="form-control">
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label for="tablets">Tablets</label>
+                    <input type="text" id="tablets-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="phones">Phones</label>
+                    <input type="text" id="phones-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="mobiles">Mobiles</label>
+                    <input type="text" id="mobiles-up" class="form-control">
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label for="docks">Dock-Stations</label>
+                    <input type="text" id="docks-up" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="ebox">E-Box</label>
+                    <input type="text" id="ebox-up" class="form-control">
+                </div>
+                <div class="form-group" style="margin-top: 1.5rem">
+                    <button id="update-row-btn">Update</button>
+                </div>
+
+                
+            </div>
+        </div>
+        </div>
         </section>
     </main>
 

@@ -74,6 +74,43 @@ class DbService {
             console.log(error);
         }
     }
+
+    async deleteRowById(id) {
+        try {
+            id = parseInt(id, 10);
+            const response = await new Promise((resolve, reject) => {
+                const query = 'DELETE FROM `grn_table` WHERE id = ?';
+                connection.query(query, [id], (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                })
+            });
+    
+            return response === 1 ? true : false;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+        
+    }
+
+    async updateById(id, grnU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU) {
+        try {
+            id = parseInt(id, 10);
+            const response = await new Promise((resolve, reject) => {
+                const query = 'UPDATE `grn_table` SET GRN = ?, Desktops = ?, Notebooks = ?, Monitors = ?, Printers = ?, Servers = ?, Switches = ?, TVs = ?, Scanners = ?, Tablets = ?, Phones = ?, Mobiles = ?, DockStations = ?, Ebox = ? WHERE id = ?';
+                connection.query(query, [grnU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU, id], (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result.affectedRows);
+                })
+            });
+    
+            return response === 1 ? true : false;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
 }
 
 module.exports = DbService;

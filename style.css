@@ -59,7 +59,7 @@ h3 {
 
 
 section {
-
+    padding-bottom: 2rem;
 }
 
 
@@ -103,6 +103,14 @@ body::-webkit-scrollbar-thumb{
 }
 
 .formBox .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.upBox .row {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

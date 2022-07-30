@@ -7,6 +7,93 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const addBtn = document.querySelector('#submit-btn');
 
+const updateBtn = document.querySelector('#update-row-btn');
+
+const deleteBtn = document.querySelector('table tbody').addEventListener('click', function(event) {
+    if (event.target.className === "delete-row-btn"){
+        deleteRowById(event.target.dataset.id);
+    
+    }
+    if (event.target.className === "edit-row-btn"){
+        handleEditRow(event.target.dataset.id)
+    }
+});
+
+
+
+function deleteRowById(id){
+    fetch('http://localhost:5100/delete/' + id, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success){
+            location.reload();
+        }
+    });
+}
+
+function handleEditRow(id) {
+    const updateSection = document.querySelector('#update-row');
+    updateSection.hidden = false;
+    document.querySelector('#grn-up').dataset.id = id;
+    console.log(id);
+}
+
+
+
+updateBtn.onclick = function () {
+    const updateGrnInput = document.querySelector('#grn-up');
+    const updateDesktopInput = document.querySelector('#desktops-up');
+    const updateNotebookInput = document.querySelector('#notebooks-up');
+    const updateMonitorInput = document.querySelector('#monitors-up');
+    const updatePrinterInput = document.querySelector('#printers-up');
+    const updateServerInput = document.querySelector('#servers-up');
+    const updateSwitchesInput = document.querySelector('#switches-up');
+    const updateTvInput = document.querySelector('#tvs-up');
+    const updateScannerInput = document.querySelector('#scanners-up');
+    const updateTabletInput = document.querySelector('#tablets-up');
+    const updatePhoneInput = document.querySelector('#phones-up');
+    const updateMobileInput = document.querySelector('#mobiles-up');
+    const updateDockInput = document.querySelector('#docks-up');
+    const updateEboxInput = document.querySelector('#ebox-up');
+
+    if(updateGrnInput.value == "" || updateDesktopInput.value == "" || updateNotebookInput.value == "" || updateMonitorInput.value == "" || updatePrinterInput.value == "" || updateServerInput.value == "" || updateSwitchesInput.value == "" || updateTvInput.value == "" || updateScannerInput.value == "" || updateTabletInput.value == "" || updatePhoneInput.value == "" || updateMobileInput.value == "" || updateDockInput.value == "" || updateEboxInput.value == "") {
+        alert('Please fill in all fields');
+    }else{
+    fetch('http://localhost:5100/update/', {
+        method: 'PATCH',
+        headers: {
+            'Content-type' : 'application/json'
+        },
+        body: JSON.stringify({
+            id: updateGrnInput.dataset.id,
+            grnU: updateGrnInput.value,
+            desktopsU: updateDesktopInput.value,
+            notebooksU: updateNotebookInput.value,
+            monitorsU: updateMonitorInput.value,
+            printersU: updatePrinterInput.value,
+            serversU: updateServerInput.value,
+            switchesU: updateSwitchesInput.value,
+            tvsU: updateTvInput.value,
+            scannersU: updateScannerInput.value,
+            tabletsU: updateTabletInput.value,
+            phonesU: updatePhoneInput.value,
+            mobilesU: updateMobileInput.value,
+            docksU: updateDockInput.value,
+            eboxU: updateEboxInput.value
+
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        }
+    })
+    }
+}
+
 addBtn.onclick = function () {
     const grnIn = document.querySelector('#grn');
     const grn = grnIn.value;
