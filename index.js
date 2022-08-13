@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
 });
 
+AOS.init();
+
 const addBtn = document.querySelector('#submit-btn');
 
 const updateBtn = document.querySelector('#update-row-btn');
@@ -230,3 +232,4 @@ function loadHTMLTable(data) {
 
     table.innerHTML = tableHtml;
 }
+

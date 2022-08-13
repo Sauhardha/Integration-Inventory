@@ -5,30 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!--<link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- bootstrap 5 css -->
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+ -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
     <title>GRN Storage App</title>
 </head>
 
 <body>
 
     <!---NAV-->
-    <nav class="navbar navbar-expand d-flex flex-row align-item-start" id="sidebar">
-        <a href="#" class="navbar-brand text-light mt-5"></a>
-        <ul class="navbar-nav d-flex flex-row mt-2 w-100">
-            <li class="nav-item w-30">
-                <a href="#" class="nav-link text-light pl-4">Home</a>
+    <nav class="navbar" id="sidebar">
+        <ul class="navbar-nav">
+
+            <li class="logo">
+                <a href="index.html" class="nav-link">
+                    <span class="link-text">Dashboard</span>
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M6.634,13.591H2.146c-0.247,0-0.449,0.201-0.449,0.448v2.692c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449v-2.692C7.083,13.792,6.881,13.591,6.634,13.591 M6.185,16.283h-3.59v-1.795h3.59V16.283zM6.634,8.205H2.146c-0.247,0-0.449,0.202-0.449,0.449v2.692c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449V8.653C7.083,8.407,6.881,8.205,6.634,8.205 M6.185,10.897h-3.59V9.103h3.59V10.897z M6.634,2.819H2.146c-0.247,0-0.449,0.202-0.449,0.449V5.96c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449V3.268C7.083,3.021,6.881,2.819,6.634,2.819 M6.185,5.512h-3.59V3.717h3.59V5.512z M15.933,5.683c-0.175-0.168-0.361-0.33-0.555-0.479l1.677-1.613c0.297-0.281,0.088-0.772-0.31-0.772H9.336c-0.249,0-0.448,0.202-0.448,0.449v7.107c0,0.395,0.471,0.598,0.758,0.326l1.797-1.728c0.054,0.045,0.107,0.094,0.161,0.146c0.802,0.767,1.243,1.786,1.243,2.867c0,1.071-0.435,2.078-1.227,2.837c-0.7,0.671-1.354,1.086-2.345,1.169c-0.482,0.041-0.577,0.733-0.092,0.875c0.687,0.209,1.12,0.314,1.839,0.314c0.932,0,1.838-0.173,2.673-0.505c0.835-0.33,1.603-0.819,2.262-1.449c1.322-1.266,2.346-2.953,2.346-4.751C18.303,8.665,17.272,6.964,15.933,5.683 M15.336,14.578c-1.124,1.077-2.619,1.681-4.217,1.705c0.408-0.221,0.788-0.491,1.122-0.812c0.97-0.929,1.504-2.168,1.504-3.485c0-1.328-0.539-2.578-1.521-3.516c-0.178-0.17-0.357-0.321-0.548-0.456c-0.125-0.089-0.379-0.146-0.569,0.041L9.769,9.327v-5.61h5.861l-1.264,1.216c-0.099,0.094-0.148,0.229-0.137,0.366c0.014,0.134,0.088,0.258,0.202,0.332c0.313,0.204,0.61,0.44,0.882,0.7c1.158,1.111,2.092,2.581,2.092,4.145C17.405,12.026,16.48,13.482,15.336,14.578"></path>
+                    </svg>
+                </a>
             </li>
 
-            <li class="nav-item w-30">
-                <a href="/list.html" class="nav-link text-light pl-4">Saved</a>
+            <li class="nav-item">
+                <a href="add.html" class="nav-link">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+                    </svg>
+                    <span href="#" class="link-text">Add</span>
+                </a>
+                
             </li>
 
-            <li class="nav-item w-30">
-                <a href="#" class="nav-link text-light pl-4">Edit</a>
+            <li class="nav-item">
+                <a href="list.html" class="nav-link">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"></path>
+                    </svg>
+                    <span href="#" class="link-text">Saved</span>
+                </a>
+                
             </li>
+
         </ul>
     </nav>
+
+    <!-- BANNER -->
 
     <div id="home">
         <div class="landing-text">
@@ -41,230 +63,6 @@
         </div>
     </div>
 
-
-    <section class="p-4 my-container mt-1">
-        <div class="container mt-4">
-                <div class="formBox">
-
-                
-                <form id="grn-form">
-                    <div class="row">
-                        
-                    </div>
-                    
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="grn" style="font-weight: 800;">GRN</label>
-                            <input type="text" id="grn" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="desktops">Desktops</label>
-                            <input type="text" id="desktops" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="notebooks">Notebooks</label>
-                            <input type="text" id="notebooks" class="form-control">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="monitors">Monitors</label>
-                            <input type="text" id="monitors" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="printers">Printers</label>
-                            <input type="text" id="printers" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="servers">Servers</label>
-                            <input type="text" id="servers" class="form-control">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="switches">Switches</label>
-                            <input type="text" id="switches" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="tvs">TVs</label>
-                            <input type="text" id="tvs" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="scanners">Scanners</label>
-                            <input type="text" id="scanners" class="form-control">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="tablets">Tablets</label>
-                            <input type="text" id="tablets" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="phones">Phones</label>
-                            <input type="text" id="phones" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="mobiles">Mobiles</label>
-                            <input type="text" id="mobiles" class="form-control">
-                        </div>
-                        
-                    </div>
-                    
-                    
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="docks">Dock-Stations</label>
-                            <input type="text" id="docks" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="ebox">E-Box</label>
-                            <input type="text" id="ebox" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <button type="button" style="margin-top: 1.5rem;"
-                        class="btn btn-primary btn-block" id="submit-btn">Add GRN</button>
-                        </div>
-
-                        
-                    </div>
-                    
-
-                    
-                </form>
-                </div>
-        </div>
-        
-        
-    </section>
-
-    <main>
-
-        <br><br><br>
-        <div>
-           <input placeholder="Search by GRN" id="search-input">
-           <button id="search-btn">Search</button>
-        </div>
-
-        <div class="table-responsive col-lg-12">
-        <table id="table">
-            <thead>
-                <th>ID</th>
-                <th>GRN</th>
-                <th>Desktops</th>
-                <th>Notebooks</th>
-                <th>Monitors</th>
-                <th>Printers</th>
-                <th>Servers</th>
-                <th>Switches</th>
-                <th>TVs</th>
-                <th>Scanners</th>
-                <th>Tablets</th>
-                <th>Phones</th>
-                <th>Mobiles</th>
-                <th>Docks</th>
-                <th>Ebox</th>
-                <th>Delete</th>
-                <th>Edit</th>
-            </thead>
-            <tbody></tbody>
-        </table>
-        </div>
-
-        <section hidden id="update-row">
-            <div class="container mt-4">
-            <div class="upBox">
-            <div class="row">
-                <div class="form-group">
-                    <label for="grn" style="font-weight: 800;">GRN</label>
-                    <input type="text" id="grn-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="desktops">Desktops</label>
-                    <input type="text" id="desktops-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="notebooks">Notebooks</label>
-                    <input type="text" id="notebooks-up" class="form-control">
-                </div>
-                
-            </div>
-            
-            <div class="row">
-                <div class="form-group">
-                    <label for="monitors">Monitors</label>
-                    <input type="text" id="monitors-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="printers">Printers</label>
-                    <input type="text" id="printers-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="servers">Servers</label>
-                    <input type="text" id="servers-up" class="form-control">
-                </div>
-                
-            </div>
-            
-            <div class="row">
-                <div class="form-group">
-                    <label for="switches">Switches</label>
-                    <input type="text" id="switches-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="tvs">TVs</label>
-                    <input type="text" id="tvs-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="scanners">Scanners</label>
-                    <input type="text" id="scanners-up" class="form-control">
-                </div>
-                
-            </div>
-            
-            <div class="row">
-                <div class="form-group">
-                    <label for="tablets">Tablets</label>
-                    <input type="text" id="tablets-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="phones">Phones</label>
-                    <input type="text" id="phones-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="mobiles">Mobiles</label>
-                    <input type="text" id="mobiles-up" class="form-control">
-                </div>
-                
-            </div>
-            
-            <div class="row">
-                <div class="form-group">
-                    <label for="docks">Dock-Stations</label>
-                    <input type="text" id="docks-up" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="ebox">E-Box</label>
-                    <input type="text" id="ebox-up" class="form-control">
-                </div>
-                <div class="form-group" style="margin-top: 1.5rem">
-                    <button id="update-row-btn">Update</button>
-                </div>
-
-                
-            </div>
-        </div>
-        </div>
-        </section>
-    </main>
-
-    <script src="/index.js"></script>
 </body>
 
 

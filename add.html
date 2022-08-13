@@ -1,0 +1,286 @@
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <title>GRN Storage App</title>
+</head>
+
+<body>
+
+    <!---NAV-->
+    <nav class="navbar" id="sidebar">
+        <ul class="navbar-nav">
+
+            <li class="logo">
+                <a href="index.html" class="nav-link">
+                    <span class="link-text">Dashboard</span>
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M6.634,13.591H2.146c-0.247,0-0.449,0.201-0.449,0.448v2.692c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449v-2.692C7.083,13.792,6.881,13.591,6.634,13.591 M6.185,16.283h-3.59v-1.795h3.59V16.283zM6.634,8.205H2.146c-0.247,0-0.449,0.202-0.449,0.449v2.692c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449V8.653C7.083,8.407,6.881,8.205,6.634,8.205 M6.185,10.897h-3.59V9.103h3.59V10.897z M6.634,2.819H2.146c-0.247,0-0.449,0.202-0.449,0.449V5.96c0,0.247,0.202,0.449,0.449,0.449h4.488c0.247,0,0.449-0.202,0.449-0.449V3.268C7.083,3.021,6.881,2.819,6.634,2.819 M6.185,5.512h-3.59V3.717h3.59V5.512z M15.933,5.683c-0.175-0.168-0.361-0.33-0.555-0.479l1.677-1.613c0.297-0.281,0.088-0.772-0.31-0.772H9.336c-0.249,0-0.448,0.202-0.448,0.449v7.107c0,0.395,0.471,0.598,0.758,0.326l1.797-1.728c0.054,0.045,0.107,0.094,0.161,0.146c0.802,0.767,1.243,1.786,1.243,2.867c0,1.071-0.435,2.078-1.227,2.837c-0.7,0.671-1.354,1.086-2.345,1.169c-0.482,0.041-0.577,0.733-0.092,0.875c0.687,0.209,1.12,0.314,1.839,0.314c0.932,0,1.838-0.173,2.673-0.505c0.835-0.33,1.603-0.819,2.262-1.449c1.322-1.266,2.346-2.953,2.346-4.751C18.303,8.665,17.272,6.964,15.933,5.683 M15.336,14.578c-1.124,1.077-2.619,1.681-4.217,1.705c0.408-0.221,0.788-0.491,1.122-0.812c0.97-0.929,1.504-2.168,1.504-3.485c0-1.328-0.539-2.578-1.521-3.516c-0.178-0.17-0.357-0.321-0.548-0.456c-0.125-0.089-0.379-0.146-0.569,0.041L9.769,9.327v-5.61h5.861l-1.264,1.216c-0.099,0.094-0.148,0.229-0.137,0.366c0.014,0.134,0.088,0.258,0.202,0.332c0.313,0.204,0.61,0.44,0.882,0.7c1.158,1.111,2.092,2.581,2.092,4.145C17.405,12.026,16.48,13.482,15.336,14.578"></path>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="add.html" class="nav-link">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+                    </svg>
+                    <span href="#" class="link-text">Add</span>
+                </a>
+                
+            </li>
+
+            <li class="nav-item">
+                <a href="list.html" class="nav-link">
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                        <path d="M8.627,7.885C8.499,8.388,7.873,8.101,8.13,8.177L4.12,7.143c-0.218-0.057-0.351-0.28-0.293-0.498c0.057-0.218,0.279-0.351,0.497-0.294l4.011,1.037C8.552,7.444,8.685,7.667,8.627,7.885 M8.334,10.123L4.323,9.086C4.105,9.031,3.883,9.162,3.826,9.38C3.769,9.598,3.901,9.82,4.12,9.877l4.01,1.037c-0.262-0.062,0.373,0.192,0.497-0.294C8.685,10.401,8.552,10.18,8.334,10.123 M7.131,12.507L4.323,11.78c-0.218-0.057-0.44,0.076-0.497,0.295c-0.057,0.218,0.075,0.439,0.293,0.495l2.809,0.726c-0.265-0.062,0.37,0.193,0.495-0.293C7.48,12.784,7.35,12.562,7.131,12.507M18.159,3.677v10.701c0,0.186-0.126,0.348-0.306,0.393l-7.755,1.948c-0.07,0.016-0.134,0.016-0.204,0l-7.748-1.948c-0.179-0.045-0.306-0.207-0.306-0.393V3.677c0-0.267,0.249-0.461,0.509-0.396l7.646,1.921l7.654-1.921C17.91,3.216,18.159,3.41,18.159,3.677 M9.589,5.939L2.656,4.203v9.857l6.933,1.737V5.939z M17.344,4.203l-6.939,1.736v9.859l6.939-1.737V4.203z M16.168,6.645c-0.058-0.218-0.279-0.351-0.498-0.294l-4.011,1.037c-0.218,0.057-0.351,0.28-0.293,0.498c0.128,0.503,0.755,0.216,0.498,0.292l4.009-1.034C16.092,7.085,16.225,6.863,16.168,6.645 M16.168,9.38c-0.058-0.218-0.279-0.349-0.498-0.294l-4.011,1.036c-0.218,0.057-0.351,0.279-0.293,0.498c0.124,0.486,0.759,0.232,0.498,0.294l4.009-1.037C16.092,9.82,16.225,9.598,16.168,9.38 M14.963,12.385c-0.055-0.219-0.276-0.35-0.495-0.294l-2.809,0.726c-0.218,0.056-0.351,0.279-0.293,0.496c0.127,0.506,0.755,0.218,0.498,0.293l2.807-0.723C14.89,12.825,15.021,12.603,14.963,12.385"></path>
+                    </svg>
+                    <span href="#" class="link-text">Saved</span>
+                </a>
+                
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+
+    <div class="add-home">
+        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="947.25" height="603.69" viewBox="0 0 947.25 603.69" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M452.65527,713.275l-29,16.84,28.58985-6.9c-.22022,2.36-.52,4.68-.91992,6.95-.11036.63-.23,1.25-.36036,1.87a51.87781,51.87781,0,0,1-5.25,14.92005c-.48.86-.96,1.69995-1.46,2.51-.48.82-.98,1.61-1.48974,2.38H365.895c-.64014-.77-1.25-1.57-1.81006-2.38a35.97564,35.97564,0,0,1-6.17969-26.62,44.96785,44.96785,0,0,1,1.19971-5.63,51.56839,51.56839,0,0,1,1.83008-5.57,73.442,73.442,0,0,1,4.41015-9.35c3.52-6.34,9.00977-12.06,15.48-17.14a108.06933,108.06933,0,0,1,9.77978-6.8q.96021-.615,1.9502-1.2c1.00976-.6,2.02-1.19,3.04-1.76,2.02979-1.16,4.07959-2.26,6.12989-3.3.54-.28,1.06982-.55,1.6001-.81,4.4497-2.22,8.87988-4.21,13.0996-5.96.53028-.22,1.07032-.44,1.6001-.65a233.30757,233.30757,0,0,1,25.72022-8.81s.02978.08.08008.25c.12988.46.46,1.57.90966,3.21,1.25,4.55,3.4502,13.23,5.22022,23.71.1001.57.18994,1.15.29,1.73005a181.68776,181.68776,0,0,1,2.4497,26.81c.01026.56.01026,1.11.01026,1.67Z" transform="translate(-126.375 -148.155)" fill="#f2f2f2"/><path d="M445.86523,654.845c-.01025.03-.11035.52-.34033,1.42-.18994.75-.4497,1.78-.79,3.06-1.16992,4.47-3.25,11.96-6.21,20.98-.16992.52-.3501,1.06-.52978,1.6-2.06006,6.17-4.51026,12.99-7.33985,20-.71045,1.76-1.42041,3.49-2.15039,5.18-.21972.53-.43994,1.05005-.66992,1.56q-4.65015,10.77007-9.56982,19.71l-.83008,1.49a134.52429,134.52429,0,0,1-13.18994,19.62c-.66992.82-1.3501,1.61-2.04,2.38h-2.32031c.70019-.77,1.40039-1.57,2.08007-2.38a132.14581,132.14581,0,0,0,13.87012-20.4c.28027-.49.56006-.98.83008-1.48,3.52978-6.41,6.74023-13.11,9.60986-19.75.23-.51.4502-1.03.66992-1.56,3.75-8.78,6.90039-17.41,9.44-25.00994.18017-.54.36035-1.08.53027-1.61005,3.70019-11.22,6.02-20.02,6.91016-23.54.11962-.52.21972-.93.29-1.21.06983-.26.09961-.41.10987-.44l.81006.19h.00976Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M451.48486,683.165c-.50976-.03-1.02-.08-1.52978-.13a44.99648,44.99648,0,0,1-11.43018-2.73c-.52978-.21-1.06982-.42-1.60986-.65a45.858,45.858,0,0,1-4.28027-2.11,45.27611,45.27611,0,0,1-14.60987-12.87c-.12988-.17-.25976-.35-.37988-.52q-.78.33-1.58984.66c.11962.17.23974.34.36962.51a46.76551,46.76551,0,0,0,15.39014,13.7,48.307,48.307,0,0,0,4.56983,2.24006c.53027.22,1.07031.44,1.61035.63995a46.89079,46.89079,0,0,0,12.25,2.86005c.5.05,1.00976.09,1.50976.12C451.665,684.295,451.5752,683.725,451.48486,683.165Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M452.69482,711.575a45.37037,45.37037,0,0,1-24.18994-4.49q-.79467-.375-1.56006-.81a4.2326,4.2326,0,0,1-.46972-.25,45.58023,45.58023,0,0,1-23.1499-34.74c-.02-.17-.04-.35-.06006-.51995-.54.28-1.08008.55-1.60987.83.01953.17.03955.33.06983.5a47.22571,47.22571,0,0,0,23.93017,35.41c.19971.11.40967.23.61963.32995q.78.42,1.56006.81a47.05043,47.05043,0,0,0,24.82031,4.63c.44971-.04.89991-.09,1.34961-.13995,0-.57.01026-1.13.01026-1.7C453.5752,711.485,453.13477,711.535,452.69482,711.575Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M451.3252,730.165a45.54776,45.54776,0,0,1-27.75.21,44.468,44.468,0,0,1-5.31006-2.02c-.54-.24-1.07032-.5-1.6001-.77-.56983-.28-1.12988-.57995-1.68018-.87994a45.67468,45.67468,0,0,1-23.38965-42.39,43.76337,43.76337,0,0,1,.96-7.16c.02978-.16.06-.32.10009-.48-.66015.41-1.32031.82-1.97021,1.24-.02979.15-.06006.29-.08008.44a46.77057,46.77057,0,0,0-.73,9.79,47.25281,47.25281,0,0,0,24.28027,40.03c.55957.31,1.11963.61,1.67969.89.53027.27,1.07031.53,1.6001.78a47.17478,47.17478,0,0,0,33.52978,2.19c.37012-.1.74024-.22,1.11036-.34.1499-.64.27978-1.28.3999-1.92C452.09521,729.915,451.71484,730.045,451.3252,730.165Z" transform="translate(-126.375 -148.155)" fill="#fff"/><rect x="200.25" y="246.52002" width="56" height="56" fill="#9e616a"/><polygon points="165.326 581.214 176.36 581.213 181.608 538.656 165.324 538.657 165.326 581.214" fill="#9e616a"/><path d="M321.98486,741.805l-16.57959-11.45v-7.47l-1.88037.11-11.81982.71-3.74024.22-2.12988,25.54-.06982.85h7.83007l.15967-.85,1.24024-6.54,3.16992,6.54.41016.85H319.335a4.67905,4.67905,0,0,0,4.66992-4.66A4.67076,4.67076,0,0,0,321.98486,741.805Z" transform="translate(-126.375 -148.155)" fill="#2f2e41"/><polygon points="229.853 574.209 240.457 577.258 257.265 537.81 241.615 533.309 229.853 574.209" fill="#9e616a"/><path d="M381.895,742.695l-12.77-15.59,2.06982-7.18-1.83984-.41-10.25-2.3-1.31006-.29-3.6499-.82-9.41016,24.75,7.52,2.17,3.39014-6.72,1.39014,8.09,4.73974,1.36005,12.89014,3.71,2.33008.67a4.66278,4.66278,0,0,0,4.8999-7.44Z" transform="translate(-126.375 -148.155)" fill="#2f2e41"/><path d="M1070.355,148.155H485.895a3.28,3.28,0,0,0-3.27,3.28v19.25a3.27992,3.27992,0,0,0,3.27,3.28h584.46a3.27961,3.27961,0,0,0,3.27-3.28v-19.25A3.27966,3.27966,0,0,0,1070.355,148.155Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><circle id="b5b16cf8-67a2-4f26-b1bf-3e43b6764a92" data-name="Ellipse 90" cx="375.2487" cy="11.96482" r="4.64784" fill="#fff"/><circle id="b66c556c-a3ce-485d-a169-682ae89102b6" data-name="Ellipse 91" cx="392.89038" cy="11.96482" r="4.64784" fill="#fff"/><circle id="b9ccba63-6bb8-47f6-85e8-d2b1a1d873e2" data-name="Ellipse 92" cx="410.53288" cy="11.96482" r="4.64784" fill="#fff"/><path d="M1053.06494,153.915h-20.31006a1.505,1.505,0,1,0,0,3.01h20.31006a1.505,1.505,0,1,0,0-3.01Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M1053.06494,159.555h-20.31006a1.505,1.505,0,1,0,0,3.01h20.31006a1.505,1.505,0,1,0,0-3.01Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M1053.06494,165.195h-20.31006a1.505,1.505,0,1,0,0,3.01h20.31006a1.505,1.505,0,1,0,0-3.01Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M1050.75488,229.645H899.3252a3.99016,3.99016,0,0,0-3.98,3.98v61.45a3.9901,3.9901,0,0,0,3.98,3.98h151.42968a3.9838,3.9838,0,0,0,3.98-3.98v-61.45A3.98385,3.98385,0,0,0,1050.75488,229.645Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M1036.335,318.975H913.74512a4.775,4.775,0,0,0,0,9.55H1036.335C1042.55518,328.615,1042.49512,318.885,1036.335,318.975Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M1036.335,340.865H913.74512a4.775,4.775,0,0,0,0,9.55H1036.335C1042.55518,350.505,1042.49512,340.775,1036.335,340.865Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M1036.335,362.755H913.74512a4.775,4.775,0,0,0,0,9.55H1036.335C1042.55518,372.395,1042.49512,362.665,1036.335,362.755Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M851.75488,229.645H700.3252a3.99016,3.99016,0,0,0-3.98,3.98v61.45a3.9901,3.9901,0,0,0,3.98,3.98H851.75488a3.9838,3.9838,0,0,0,3.98-3.98v-61.45A3.98385,3.98385,0,0,0,851.75488,229.645Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M837.335,318.975H714.74512a4.775,4.775,0,0,0,0,9.55H837.335C843.55518,328.615,843.49512,318.885,837.335,318.975Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M837.335,340.865H714.74512a4.775,4.775,0,0,0,0,9.55H837.335C843.55518,350.505,843.49512,340.775,837.335,340.865Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M837.335,362.755H714.74512a4.775,4.775,0,0,0,0,9.55H837.335C843.55518,372.395,843.49512,362.665,837.335,362.755Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M472.04287,345.86227a10.02421,10.02421,0,0,0-.42317,1.74747l-62.00428-10.95961-53.4076-28.7994a15.08,15.08,0,0,0-16.0966,25.41817l.00006,0A118.971,118.971,0,0,0,372.847,350.26435l38.71983,12.96946,67.82117-4.34723a9.9971,9.9971,0,1,0-7.34512-13.02431Z" transform="translate(-126.375 -148.155)" fill="#9e616a"/><path d="M624.55518,346.055h-193.02a5.08706,5.08706,0,0,0-5.08008,5.08v78.31a5.087,5.087,0,0,0,5.08008,5.07995h193.02A5.08488,5.08488,0,0,0,629.625,429.445v-78.31A5.0849,5.0849,0,0,0,624.55518,346.055Z" transform="translate(-126.375 -148.155)" fill="#f9a826"/><path d="M606.1748,459.915H449.915a6.09,6.09,0,0,0,0,12.18H606.1748C614.105,472.20505,614.0249,459.805,606.1748,459.915Z" transform="translate(-126.375 -148.155)" fill="#f9a826"/><path d="M606.1748,487.815H449.915a6.09,6.09,0,0,0,0,12.18H606.1748C614.105,500.105,614.0249,487.70505,606.1748,487.815Z" transform="translate(-126.375 -148.155)" fill="#f9a826"/><path d="M606.1748,515.725H449.915a6.085,6.085,0,1,0,0,12.17H606.1748C614.105,528.005,614.0249,515.615,606.1748,515.725Z" transform="translate(-126.375 -148.155)" fill="#f9a826"/><circle cx="357.65385" cy="265.79258" r="29.72868" transform="translate(-173.49417 303.97269) rotate(-61.33683)" fill="#9e616a"/><path d="M362.625,229.675H343.4209c-12.58985,0-22.7959,11.48193-22.7959,25.64563-9.5,9.53894-6.64893,21.48919.88867,34.35437a149.22541,149.22541,0,0,1,39.541,10.57574l1.79248-7.65448,3.53564,10.08081q4.71679,2.28534,9.35352,4.99793c-3.60791-16.95111-5.09278-33.86286-2.61572-47H379.625v-7.1181l2.208,7.1181h11.792V260.675A30.9998,30.9998,0,0,0,362.625,229.675Z" transform="translate(-126.375 -148.155)" fill="#2f2e41"/><path d="M360.625,303.675,324.66978,302.116l-.967,3.67373a213.66873,213.66873,0,0,0-3.59909,92.56989l0,0h0a8.24249,8.24249,0,0,1,2.34458,8.00651l-.5165,2.0591.04779.07542a12.06182,12.06182,0,0,1,1.60133,9.00482v0l1.79834,9.90181L383.625,401.675l13-45Z" transform="translate(-126.375 -148.155)" fill="#cacaca"/><path d="M449.73154,398.51889a10.024,10.024,0,0,0-1.08438,1.43417L396.1439,365.196l-37.51032-47.69436a15.08,15.08,0,0,0-24.89132,16.89988l0,0a118.97085,118.97085,0,0,0,23.25336,28.63132l30.34607,27.323,63.93732,23.03539a9.9971,9.9971,0,1,0-1.54751-14.87242Z" transform="translate(-126.375 -148.155)" fill="#9e616a"/><path d="M563.90846,298.81988a28.73541,28.73541,0,1,1,28.73541-28.73541A28.73543,28.73543,0,0,1,563.90846,298.81988Z" transform="translate(-126.375 -148.155)" fill="#e4e4e4"/><path d="M575.24669,267.25h-8.50362v-8.50373a2.83461,2.83461,0,0,0-5.66922,0V267.25h-8.50374a2.83457,2.83457,0,0,0,0,5.66913h8.50374v8.50372a2.83461,2.83461,0,0,0,5.66922,0v-8.50372h8.50362a2.83457,2.83457,0,1,0,0-5.66913Z" transform="translate(-126.375 -148.155)" fill="#fff"/><path d="M420.61426,619.61374a16.87393,16.87393,0,0,0-1.57031-15.08753L393.625,472.675l-10-50h-60s-37.5,41.5-29.5,94.5l-2.23926,74.64014a27.44788,27.44788,0,0,0-1.50342,16.18585l.89112,4.22223-.34375.63592a21.33414,21.33414,0,0,0-.26856,19.77216L288.125,717.175l18-1,26.5-98.5,17.5-88.5,29.5,68.5,1,16-.48535,14.10333L357.125,710.175l19.5,7.5Z" transform="translate(-126.375 -148.155)" fill="#2f2e41"/><path d="M566.05518,750.655a1.193,1.193,0,0,1-1.18995,1.19H127.56494a1.19,1.19,0,0,1,0-2.38H564.86523A1.18664,1.18664,0,0,1,566.05518,750.655Z" transform="translate(-126.375 -148.155)" fill="#cacaca"/></svg>
+        <div class="add-hometext" data-aos="fade-left" data-aos-duration="1000">
+            <p>Add a digital copy of the GRNs given by paper from the Receiving department.</p>
+            <div class="scroll-anim">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <!-- FORM -->
+    <section>
+        <div>
+            <div class="formBox">
+                <form id="grn-form">
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="grn" style="font-weight: 800;">GRN</label>
+                            <input type="text" id="grn" class="">
+                        </div>
+                        <div class="form-group">
+                            <label for="desktops">Desktops</label>
+                            <input type="text" id="desktops" class="">
+                        </div>
+                        <div class="form-group">
+                            <label for="notebooks">Notebooks</label>
+                            <input type="text" id="notebooks" class="">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="monitors">Monitors</label>
+                            <input type="text" id="monitors" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="printers">Printers</label>
+                            <input type="text" id="printers" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="servers">Servers</label>
+                            <input type="text" id="servers" class="form-control">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="switches">Switches</label>
+                            <input type="text" id="switches" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="tvs">TVs</label>
+                            <input type="text" id="tvs" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="scanners">Scanners</label>
+                            <input type="text" id="scanners" class="form-control">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="tablets">Tablets</label>
+                            <input type="text" id="tablets" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="phones">Phones</label>
+                            <input type="text" id="phones" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobiles">Mobiles</label>
+                            <input type="text" id="mobiles" class="form-control">
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="docks">Dock-Stations</label>
+                            <input type="text" id="docks" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="ebox">E-Box</label>
+                            <input type="text" id="ebox" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button"
+                        class="submit-btn" id="submit-btn">Add GRN</button>
+                        </div>
+
+                        
+                    </div>
+                    
+                </form>
+                </div>
+        </div>
+        
+    </section>
+
+    
+    <!-- FOOTER-->
+    <footer>
+        <div class="foot-content">
+            <h3>Integrate</h3>
+            <p>This application is built for the integration team at APCD.</p>
+        </div>
+        <div class="foot-copyr">
+            <p>Copyright &copy;2022 APCD Integration. Designed by <span>Sauhardha.</span></p>
+        </div>
+    </footer>
+
+    <script src="/index.js"></script>
+    <script>
+        addBtn.onclick = function () {
+    const grnIn = document.querySelector('#grn');
+    const grn = grnIn.value;
+
+    const desktopsIn = document.querySelector('#desktops');
+    const desktops = desktopsIn.value;
+
+    const notebooksIn = document.querySelector('#notebooks');
+    const notebooks = notebooksIn.value;
+
+    const monitorsIn = document.querySelector('#monitors');
+    const monitors = monitorsIn.value;
+
+    const printersIn = document.querySelector('#printers');
+    const printers = printersIn.value;
+
+    const serversIn = document.querySelector('#servers');
+    const servers = serversIn.value;
+
+    const switchesIn = document.querySelector('#switches');
+    const switches = switchesIn.value;
+
+    const tvsIn = document.querySelector('#tvs');
+    const tvs = tvsIn.value;
+
+    const scannersIn = document.querySelector('#scanners');
+    const scanners = scannersIn.value;
+
+    const tabletsIn = document.querySelector('#tablets');
+    const tablets = tabletsIn.value;
+
+    const phonesIn = document.querySelector('#phones');
+    const phones = phonesIn.value;
+
+    const mobilesIn = document.querySelector('#mobiles');
+    const mobiles = mobilesIn.value;
+
+    const docksIn = document.querySelector('#docks');
+    const docks = docksIn.value;
+
+    const eboxIn = document.querySelector('#ebox');
+    const ebox = eboxIn.value;
+
+    if(grn == "" || desktops == "" || notebooks == "" || monitors == "" || printers == "" || servers == "" || switches == "" || tvs == "" || scanners == "" || tablets == "" || phones == "" || mobiles == "" || docks == "" || ebox == "") {
+        alert('Please fill in all fields');
+    }else{
+        fetch('http://localhost:5100/insert' , {
+        headers: {
+            'Content-type': 'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify({grn : grn, desktops : desktops, notebooks : notebooks, monitors : monitors, printers : printers, servers : servers, switches : switches, tvs : tvs, scanners : scanners, tablets : tablets, phones : phones, mobiles : mobiles, docks : docks, ebox : ebox})
+    })
+    .then(response => response.json())
+    .then(data => insertRowIntoTable(data['data']));
+    }
+
+    grnIn.value = "";
+    desktopsIn.value = "";
+    notebooksIn.value = "";
+    monitorsIn.value = "";
+    printersIn.value = "";
+    serversIn.value = "";
+    switchesIn.value = "";
+    tvsIn.value = "";
+    scannersIn.value = "";
+    tabletsIn.value = "";
+    phonesIn.value = "";
+    mobilesIn.value = "";
+    docksIn.value = "";
+    eboxIn.value = "";
+}
+
+function insertRowIntoTable(data) {
+    const table = document.querySelector('table tbody');
+    const isTableData = table.querySelector('.no-data');
+
+    let tableHtml = "<tr>";
+
+    for (var key in data) {
+        if(data.hasOwnProperty(key)) {
+            tableHtml += `<td>${data[key]}</td>`;
+        }
+    }
+
+    tableHtml += `<td><button class="delete-row-btn" data-id=${data.id}>Delete</td>`;
+    tableHtml += `<td><button class="edit-row-btn" data-id=${data.id}>Edit</td>`;
+
+    tableHtml += "</tr>"; 
+    
+
+    if (isTableData) {
+        table.innerHTML = tableHtml;
+    } else {
+        const newRow = table.insertRow();
+        newRow.innerHTML = tableHtml;
+    }
+
+
+} 
+    </script>
+    
+</body>
+
+
+
