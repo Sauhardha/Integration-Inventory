@@ -34,6 +34,8 @@ app.get('/getAll', (request, response) => {
 
     result.then(data => response.json({data : data}))
     .catch(err => console.log(err));
+
+
     
 })
 
