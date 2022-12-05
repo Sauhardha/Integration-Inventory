@@ -782,6 +782,53 @@ th {
     cursor: pointer;
 }
 
+/*------------- KEYS -------------- */
+
+keys .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-left: 6rem;
+}
+
+keys .cards > div{
+    background: white;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+
+
+keys .cards > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+keys .cards h3 {
+    margin: 1rem 0  0.6rem;
+    font-size: 0.8rem;
+}
+
+keys .cards small {
+    margin-top: 1.3rem;
+    display: block;
+    -webkit-text-security: circle;
+}
+
+keys .cards > div:hover {
+    box-shadow: none;
+    background-color: #ffff1;
+}
+
+keys .cards .pwdCard:hover small {
+    -webkit-text-security: none;
+}
+
+
 /* Footer */
 
 footer {
