@@ -67,8 +67,8 @@
                 <i class="material-icons"> list_alt </i>
                 <div class="middle">
                     <div class="left">
-                        <h3>Total Items</h3>
-                        <h2>22</h2>
+                        <h3>Total GRNs</h3>
+                        <h2 id="totalGrns"></h2>
                     </div>
                     <div class="progress">
                         <svg>
@@ -139,17 +139,16 @@
             <!---------------- END OF CARD ITEM NOs --------------->
             
         </div>
-        <!------- END OF RIGHT------->
 
         <div class="recent-grns">
-            <h2>Recent GRNs</h2>
+            <h2>Top Items</h2>
             <table>
                 <thead>
                     <tr>
                         <th>GRN</th>
-                        <th>Top Item</th>
-                        <th>Status</th>
-                        <th>Quantity</th>
+                        <th>Desktops</th>
+                        <th>Notebooks</th>
+                        <th>Monitors</th>
             
                     </tr>
                 </thead>
@@ -165,7 +164,9 @@
         
     </main>
     <!-----------END OF MAIN-->
-    <div class="right">
+
+
+    <div class="right" style="padding-right: 1rem;">
         <div class="top">
             <div class="profile">
                 <div class="info">
@@ -186,7 +187,7 @@
                         <img src="/user.png" alt="">
                     </div>
                     <div class="message">
-                        <p><b>Mike Tyson</b> received his order of Dell XPS 13</p>
+                        <p><b>John Doe</b> received his order of Dell XPS 13</p>
                         <small class="text-muted">5 Minutes Ago</small>
                     </div>
                 </div>
@@ -196,7 +197,7 @@
                         <img src="/user.png" alt="">
                     </div>
                     <div class="message">
-                        <p><b>Lionel Messi</b> received his order of HP Spectre</p>
+                        <p><b>Mary Smith</b> received his order of HP Spectre</p>
                         <small class="text-muted">7 Minutes Ago</small>
                     </div>
                     
@@ -207,7 +208,7 @@
                         <img src="/user.png" alt="">
                     </div>
                     <div class="message">
-                        <p><b>Lebron James</b> received his order of MacBook Pro</p>
+                        <p><b>Peter Johnson</b> received his order of MacBook Pro</p>
                         <small class="text-muted">20 Minutes Ago</small>
                     </div>
                     
@@ -252,55 +253,47 @@
     function loadHTMLTable(data) {
         const table = document.querySelector('table tbody');
 
+        var GrnsInt = 0;
+        const displayTotalGrns = document.getElementById('totalGrns');
+
         if (data.length === 0) {
             table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
         }
 
         let tableHtml = "";
         /*------NEED TO Iterate through data:data!!---*/
-        var largest = data[0];
+        /* var largest = data[0];
         for (var i = 0; i < data.forEach({id, GRN, Desktops, Notebooks, Monitors, Printers, Servers, Switches, TVs, Scanners, Tablets, Phones, Mobiles, DockStations, Ebox}); i++) {
             if (largest < data[i]) {
                 largest = data[i];
             }
         }
-        console.log(largest);
-        
+        console.log(largest); */
+
 
         data.forEach(function ({
-            id,
+            GRN
+        })   
+        {
+            GrnsInt += 1;
+        });
+        
+        if (GrnsInt >= 0) {
+            displayTotalGrns.innerHTML = GrnsInt;
+        }
+
+        data.forEach(function ({
             GRN,
             Desktops,
             Notebooks,
-            Monitors,
-            Printers,
-            Servers,
-            Switches,
-            TVs,
-            Scanners,
-            Tablets,
-            Phones,
-            Mobiles,
-            DockStations,
-            Ebox
+            Monitors
         })   
         {
             tableHtml += "<tr>";
-            tableHtml += `<td>${id}</td>`;
             tableHtml += `<td>${GRN}</td>`;
             tableHtml += `<td>${Desktops}</td>`;
             tableHtml += `<td>${Notebooks}</td>`;
             tableHtml += `<td>${Monitors}</td>`;
-            tableHtml += `<td>${Printers}</td>`;
-            tableHtml += `<td>${Servers}</td>`;
-            tableHtml += `<td>${Switches}</td>`;
-            tableHtml += `<td>${TVs}</td>`;
-            tableHtml += `<td>${Scanners}</td>`;
-            tableHtml += `<td>${Tablets}</td>`;
-            tableHtml += `<td>${Phones}</td>`;
-            tableHtml += `<td>${Mobiles}</td>`;
-            tableHtml += `<td>${DockStations}</td>`;
-            tableHtml += `<td>${Ebox}</td>`;
             tableHtml += "</tr>";
         });
 
