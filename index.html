@@ -87,7 +87,7 @@
                 <div class="middle">
                     <div class="left">
                         <h3>Total Items</h3>
-                        <h2>$14,276</h2>
+                        <h2 id="totalItems"></h2>
                     </div>
                     <div class="progress">
                         <svg>
@@ -253,8 +253,11 @@
     function loadHTMLTable(data) {
         const table = document.querySelector('table tbody');
 
-        var GrnsInt = 0;
+        var grnsInt = 0;
         const displayTotalGrns = document.getElementById('totalGrns');
+
+        var itemsInt = 0;
+        const displayTotalItems = document.getElementById('totalItems');
 
         if (data.length === 0) {
             table.innerHTML = "<tr><td class='no-data' colspan='5'>No Data</td></tr>";
@@ -270,17 +273,32 @@
         }
         console.log(largest); */
 
+        // Count Total GRNs
+        data.forEach(function ({
+            GRN
+        })   
+        {
+            grnsInt += 1;
+        });
+        
+        if (grnsInt >= 0) {
+            displayTotalGrns.innerHTML = grnsInt;
+        }
+
+        //Count Total Items
 
         data.forEach(function ({
             GRN
         })   
         {
-            GrnsInt += 1;
+            itemsInt += 1;
         });
         
-        if (GrnsInt >= 0) {
-            displayTotalGrns.innerHTML = GrnsInt;
+        if (itemsInt >= 0) {
+            displayTotalItems.innerHTML = itemsInt;
         }
+
+        //Fill Top Grns Table
 
         data.forEach(function ({
             GRN,

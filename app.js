@@ -39,6 +39,7 @@ app.get('/getAll', (request, response) => {
     
 })
 
+
 // update
 app.patch('/update', (request, response) => {
     const {id, grnU, desktopsU, notebooksU, monitorsU, printersU, serversU, switchesU, tvsU, scannersU, tabletsU, phonesU, mobilesU, docksU, eboxU } = request.body;
@@ -64,6 +65,8 @@ app.delete('/delete/:id', (request, response) => {
     result.then(data => response.json({success : data}))
     .catch(err => console.log(err));
 })
+
+
 
 // running
 
