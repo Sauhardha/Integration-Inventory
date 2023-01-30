@@ -821,7 +821,7 @@ keys .cards small {
 
 keys .cards > div:hover {
     box-shadow: none;
-    background-color: #ffff1;
+    background-color: #ffff;
 }
 
 keys .cards .pwdCard:hover small {
