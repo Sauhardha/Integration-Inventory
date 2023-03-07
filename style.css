@@ -616,6 +616,34 @@ table tbody tr:last-child td {
     animation-delay: 0s;
 }
 
+
+
+/* INSTRUCTIONS -----------------*/
+
+.horiBar {
+    margin-top: 1rem;
+    margin-left: 6rem;
+    background: #fff;
+    width: 88%;
+    height: 40vh;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes animate {
     0%{
         top: -5px;
