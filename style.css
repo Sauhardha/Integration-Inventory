@@ -194,7 +194,7 @@ h3 {
 .nav-link:active,
 .nav-link:focus,
 .nav-link:hover {
-    background: #6982a4;
+    background: #2E2C37;
     filter: grayscale(0%) opacity(1);
     color: #f2f2f2;
 
@@ -459,18 +459,25 @@ main .cards small {
 
 .right .recent-updates {
     margin-top: 1rem;
+
 }
 
 .right .recent-updates h2 {
-    margin-bottom: 0.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .right .recent-updates {
     background-color: white;
-    padding: var(--card-padding);
+    padding: 1rem;
     border-radius: var(--card-border-radius);
     /*box-shadow: var(--box-shadow);*/
     transition: all 300ms ease;
+}
+
+.right .recent-updates .updates {
+    margin: 0px;
 }
 
 .right .recent-updates .updates:hover {
@@ -481,7 +488,7 @@ main .cards small {
     display: grid;
     grid-template-columns: 2.6rem auto;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 14px;
 
 }
@@ -489,6 +496,12 @@ main .cards small {
 .right .recent-updates .updates .update small {
     font-size: 12px;
 }
+
+.right .recent-updates .updates .update .message {
+    padding: 0px;
+}
+
+
 
 /*----------------- Recent GRNs----------------*/
 
