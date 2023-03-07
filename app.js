@@ -31,12 +31,22 @@ app.get('/getAll', (request, response) => {
     const db = dbService.getDbServiceInstance();
 
     const result = db.getAllData();
+    
 
     result.then(data => response.json({data : data}))
     .catch(err => console.log(err));
+})
 
+// sum
 
-    
+app.get('/sumAll', (request, response) => {
+    const db = dbService.getDbServiceInstance();
+
+    const result = db.countAllItems();
+
+    result.then(data => response.json({data : data}))
+    .catch(err => console.log(err));
+    console.log('hello');
 })
 
 

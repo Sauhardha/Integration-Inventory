@@ -111,6 +111,24 @@ class DbService {
             return false;
         }
     }
+
+    async countAllItems() {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT SUM(Desktops + Notebooks + Monitors + Printers + Servers + Switches + TVs + Scanners + Tablets + Phones + Mobiles + DockStations + Ebox) AS total_sum FROM `grn_table`";
+
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(results);
+                })
+            });
+            //console.log(response);
+            return response;
+
+        }catch(error){
+            console.log(error);
+        }
+    }
 }
 
 module.exports = DbService;

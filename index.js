@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('http://localhost:5100/getAll')
     .then(response => response.json())
     .then(data => loadHTMLTable(data['data']));
-    
+
+    fetch('http://localhost:5100/sumAll')
+            .then(response => response.json())
+            .then(data => loadItemCount(data));
 });
 
 AOS.init();

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Playfair+Display:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -65,8 +67,8 @@ b {
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: auto 12rem;
-    
 }
+
 
 
 
@@ -206,8 +208,11 @@ h3 {
 /* ------------ Dashboard Banner ------------- */
 
 main h1 {
-    margin-top: 1rem;
+    margin-top: 0rem;
     margin-left: 6rem;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: 500;
+    font-size: 2.4rem; */
 }
 
 main .cards {
@@ -390,7 +395,7 @@ main .cards svg circle {
 }
 
 main .cards #item1 svg circle {
-    stroke: #F9A927;
+    stroke: #fff;
     stroke-dasharray: 0;
     stroke-dashoffset: 0;
 }
@@ -494,6 +499,7 @@ main .cards small {
 
 .recent-grns h2 {
     margin-bottom: 0.8rem;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 table {
@@ -508,8 +514,9 @@ table {
 
 
 th, td {
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.31rem;
+    font-size: 0.6rem;
+    overflow: hidden;
 }
 
 table:hover {
@@ -517,7 +524,7 @@ table:hover {
 }
 
 table tbody td {
-    height: 2.8rem;
+    height: 3rem;
     border-bottom: 1px solid var(--colour-light);
     color: #262335;
 }
@@ -707,6 +714,14 @@ input {
     margin-top: 20px;
 }
 
+
+
+.upBox {
+    padding: 3.5rem;
+    border-top: 5px solid #36342F;
+    border-bottom: 5px solid #36342F;
+}
+
 .upBox .row {
     width: 100%;
     display: grid;
@@ -724,11 +739,17 @@ main {
 .table-container {
     display: flex;
 }
+
+#table {
+    width: 20vw;
+    font-size: 40px;
+}
 /* 
 table {
-    font-family: sans-serif;
-    border-collapse: collapse;
+    width: 20vw;
 }
+
+
 
 
 table, th, td {
@@ -784,6 +805,10 @@ th {
 
 /*------------- KEYS -------------- */
 
+.keys-container {
+    padding: 1rem;
+}
+
 keys .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -795,7 +820,6 @@ keys .cards > div{
     background: white;
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
-    margin-top: 1rem;
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
 }
@@ -833,7 +857,7 @@ keys .cards .pwdCard:hover small {
 
 footer {
     background: #262335;
-    height: auto;
+    height: 40vh;
     width: 100%;
     padding-top: 50px;
     color: #fff;
@@ -845,12 +869,14 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    color: #fff;
 }
 
 .foot-content h3 {
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 3rem;
+    color: #fff;
 }
 
 .foot-content p {
@@ -858,6 +884,7 @@ footer {
     margin: 10px auto;
     line-height: 30px;
     font-size: 14px;
+    color: #fff;
 }
 
 .foot-copyr {
@@ -866,12 +893,14 @@ footer {
     padding: 20px 0;
     text-align: center;
     padding-bottom: 50px;
+    color: #fff;
 }
 
 .foot-copyr p{
     font-size: 16px;
     word-spacing: 2px;
     text-transform: capitalize;
+    color: #fff;
 }
 
 .foot-bottom span {

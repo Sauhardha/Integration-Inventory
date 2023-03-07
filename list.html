@@ -106,9 +106,13 @@
             </table>
         </div>
 
+    </section>
+
         <section hidden id="update-row">
-            <div class="container">
-                <div class="upBox">
+            <div>
+            <div class="upBox">
+                <form id="up-form">
+                    
                     <div class="row">
                         <div class="form-group">
                             <label for="grn" style="font-weight: 800;">GRN</label>
@@ -182,18 +186,26 @@
                             <label for="ebox">E-Box</label>
                             <input type="text" id="ebox-up" class="form-control">
                         </div>
-                        <div class="form-group" style="margin-top: 1.5rem">
-                            <button id="update-row-btn">Update</button>
+                        <div class="form-group">
+                            <button id="update-row-btn" class="submit-btn">Update</button>
                         </div>
-
-
                     </div>
+                    
+                    </form>
                 </div>
             </div>
         </section>
 
         <!-- FOOTER -->
-   
+        <footer>
+            <div class="foot-content">
+                <h3>View & Edit GRN database</h3>
+                <p>This application is used by the integration team at APCD.</p>
+            </div>
+            <div class="foot-copyr">
+                <p>Copyright &copy;2022 APCD Integration. <!-- Designed by <span>Sauhardha.</span> --></p>
+            </div>
+        </footer>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -353,7 +365,7 @@
             }
         </script>
 
-    </section>
+   
 
     <!-- <footer style="width: 100vw;">
         <div class="foot-content">
